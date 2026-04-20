@@ -1,0 +1,163 @@
+.workflowBoard {
+  margin-left: 220px;
+  min-height: 100vh;
+  padding: 28px;
+  background: #f3f7f1;
+  color: #173224;
+}
+
+.workflowHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.workflowActions {
+  display: flex;
+  gap: 10px;
+}
+
+.workflowActions input {
+  border: 1px solid #bfd0c4;
+  border-radius: 10px;
+  padding: 10px 12px;
+  min-width: 250px;
+}
+
+.workflowActions button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #204b35;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.workflowActions button.secondary {
+  background: #f0f4ef;
+  color: #173224;
+  border: 1px solid #bfd0c4;
+}
+
+.workflowTabs {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.workflowTabs button {
+  border: 1px solid #bfd0c4;
+  background: #fff;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.workflowTabs button.active {
+  background: #204b35;
+  color: #fff;
+  border-color: #204b35;
+}
+
+.workflowList {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.workflowCard {
+  background: #fff;
+  border: 1px solid #d7e2db;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(20, 60, 35, 0.06);
+}
+
+.workflowCard p {
+  margin: 6px 0;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.status.submitted {
+  background: #e6f4ff;
+  color: #165e93;
+}
+
+.status.graded {
+  background: #e8f9ee;
+  color: #16663d;
+}
+
+.status.rejected {
+  background: #feecec;
+  color: #9b1c1c;
+}
+
+.workflowTableWrap {
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid #d7e2db;
+  border-radius: 14px;
+  overflow: auto;
+}
+
+.workflowTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.workflowTable th,
+.workflowTable td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eef3ef;
+  font-size: 0.95rem;
+}
+
+.workflowTable th {
+  background: #f7faf8;
+  color: #355245;
+}
+
+.summary {
+  margin: 0;
+  padding: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .workflowBoard {
+    margin-left: 0;
+    padding: 18px;
+  }
+
+  .workflowHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .workflowActions {
+    width: 100%;
+  }
+
+  .workflowActions input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .workflowList {
+    grid-template-columns: 1fr;
+  }
+}

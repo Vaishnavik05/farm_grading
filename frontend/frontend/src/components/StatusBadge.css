@@ -1,0 +1,20 @@
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 8px;
+}
+.graded { background: #38a169; }
+.approved { background: #3182ce; }
+.rejected { background: #e53e3e; }
+.submitted { background: #ed8936; }
+.underInspection { background: #805ad5; }
+.created { background: #718096; }
+.completed { background: #319795; }
+.cancelled { background: #1a202c; }
+.available { background: #38a169; }
+.lowStock { background: #ed8936; }
+.outOfStock { background: #e53e3e; }

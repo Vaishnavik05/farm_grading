@@ -1,0 +1,196 @@
+.dashboardShell {
+  min-height: 100vh;
+  margin-left: 220px;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(26, 82, 118, 0.15), transparent 30%),
+    linear-gradient(180deg, #f4f8f1 0%, #edf2ea 100%);
+  color: #163024;
+}
+
+.dashboardHero {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 28px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(22, 48, 36, 0.08);
+  box-shadow: 0 18px 50px rgba(22, 48, 36, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.dashboardEyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #5f7364;
+}
+
+.dashboardHero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3.4rem);
+  line-height: 1.05;
+  color: #163024;
+}
+
+.dashboardSubtitle {
+  margin-top: 12px;
+  max-width: 64ch;
+  color: #4c5f53;
+  line-height: 1.6;
+}
+
+.dashboardHeroActions {
+  display: grid;
+  gap: 12px;
+  min-width: 240px;
+}
+
+.dashboardAction {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.dashboardAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(22, 48, 36, 0.12);
+}
+
+.dashboardAction.primary {
+  background: linear-gradient(135deg, #163024 0%, #285942 100%);
+  color: #f7fbf8;
+}
+
+.dashboardAction.secondary {
+  background: rgba(255, 255, 255, 0.92);
+  color: #163024;
+  border-color: rgba(22, 48, 36, 0.12);
+}
+
+.dashboardAction small {
+  opacity: 0.78;
+}
+
+.dashboardMetrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.metricCard {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(22, 48, 36, 0.08);
+  box-shadow: 0 12px 30px rgba(22, 48, 36, 0.06);
+}
+
+.metricCard span {
+  display: block;
+  font-size: 0.86rem;
+  color: #617167;
+}
+
+.metricCard strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 2rem;
+  color: #163024;
+}
+
+.metricCard small {
+  display: block;
+  margin-top: 6px;
+  color: #54695d;
+  line-height: 1.5;
+}
+
+.dashboardContent {
+  margin-top: 18px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dashboardPanel {
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(22, 48, 36, 0.08);
+  box-shadow: 0 14px 30px rgba(22, 48, 36, 0.06);
+}
+
+.dashboardPanel h2 {
+  margin-bottom: 14px;
+  color: #163024;
+}
+
+.dashboardPanel ul {
+  margin: 0;
+  padding-left: 20px;
+  text-align: left;
+  color: #4b6155;
+  line-height: 1.7;
+}
+
+.dashboardLinks {
+  display: grid;
+  gap: 12px;
+}
+
+.dashboardLinks a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #163024;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(241, 226, 153, 0.82), rgba(255, 255, 255, 0.92));
+  border: 1px solid rgba(22, 48, 36, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .dashboardShell {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .dashboardHero {
+    flex-direction: column;
+  }
+
+  .dashboardHeroActions,
+  .dashboardMetrics {
+    width: 100%;
+  }
+
+  .dashboardMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboardMetrics {
+    grid-template-columns: 1fr;
+  }
+}
