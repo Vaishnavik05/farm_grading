@@ -15,12 +15,11 @@ public class InventoryService {
         this.repo = repo;
     }
 
-    public List<ProduceInventory> getAll() {
-        return repo.findAll();
+    public ProduceInventory save(ProduceInventory inventory) {
+        return repo.save(inventory);
     }
 
-    public ProduceInventory save(ProduceInventory inventory) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+    public List<ProduceInventory> getAll() {
+        return repo.findAll();
     }
 }

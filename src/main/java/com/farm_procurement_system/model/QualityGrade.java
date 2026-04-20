@@ -12,7 +12,7 @@ public class QualityGrade {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column
     private String gradeName;
     private String description;
 
